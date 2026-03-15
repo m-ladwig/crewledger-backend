@@ -1,9 +1,12 @@
 package com.crewledger.backend.repository
 
 import com.crewledger.backend.model.User
+import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.stereotype.Repository
 
-interface UserRepository {
+@Repository
+interface UserRepository : JpaRepository<User, Long> {
     fun findByUsername(username: String): User?
     fun findByEmail(email: String): User?
     fun existsByUsername(username: String): Boolean
