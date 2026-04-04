@@ -1,0 +1,25 @@
+info:
+  name: Campaign Creation
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseURL}}/api/campaigns"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0Z20yIiwicm9sZSI6IkdNIiwiaWF0IjoxNzc1MzI4MTU5LCJleHAiOjE3NzU0MTQ1NTl9._fSi3g8y8oBL675igWSpnlsus-Q022bISqW3oV8BntgrrOTqy4Li1I9jBBITwDS2
+  body:
+    type: json
+    data: |-
+      {
+        "name": "The Crow's Foot Job",
+        "description": "A crew of scoundrels navigating the criminal underworld of Doskvol"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

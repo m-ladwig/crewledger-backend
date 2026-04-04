@@ -7,7 +7,7 @@ import jakarta.persistence.*
 class Crew(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    val id: Long = 0L,
 
     @Column(nullable = false)
     var name: String,

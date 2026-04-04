@@ -8,7 +8,7 @@ import javax.xml.stream.events.Characters
 class Campaign(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = 0,
+    val id: Long = 0L,
 
     @Column(nullable = false)
     var name: String,
